@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReactHello</title>
+  </head>
+  <body>
+    <div id="react-app"></div>
+    <div id="vanilaapp"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script>
+      const hwHeading = React.createElement('h1', null, 'React alive!')
+      const conteiner = document.getElementById('react-app')
+      const root = ReactDOM.createRoot(conteiner)
+      root.render(hwHeading)
+    </script>
+    <script>
+      const heading = document.createElement('h1')
+      heading.textContent = 'Hello VanillaJS'
+      document.getElementById('vanilaapp').appendChild(heading)
+    </script>
+  </body>
+</html>
