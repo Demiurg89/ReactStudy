@@ -1,0 +1,49 @@
+#contain {
+  display: flex;
+  justify-content: space-around;
+}
+.app {
+  font-family: 'Gill Sans', sans-serif;
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  height: 100%;
+}
+.todo_board,
+.doing_board,
+.done_board {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 296px;
+
+  min-height: 500px;
+  word-wrap: break-word;
+  margin-right: 6px;
+  vertical-align: top;
+  position: relative;
+  background-color: aliceblue;
+}
+.todo_title,
+.doing_title,
+.done_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  border-radius: 2px 2px 0 0;
+  padding: 6px 32px 6px 18px;
+  min-height: 31px;
+  border-bottom: 1px solid;
+  border-bottom-color: #b8bfcf;
+  line-height: 18px;
+}
+
+.rename_board {
+  background: url(/PurWeb2021/pencil.png);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}

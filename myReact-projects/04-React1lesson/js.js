@@ -1,9 +1,14 @@
-const App = () => {
-  const [buttonText, setbuttonText] = React.useState('Fuck me')
-  const [classList, setclassList] = React.useState('')
+const App = (props) => {
+  const [buttonText, setbuttonText] = React.useState(props.initialButtonText)
+  const [classList, setclassList] = React.useState(props.initialClass)
   const onBtnClick = () => {
-    setbuttonText('No thanks')
-    setclassList('green-btn')
+    if (buttonText == 'No thanks') {
+      setbuttonText(props.initialButtonText)
+      setclassList(props.initialClass)
+    } else {
+      setbuttonText('No thanks')
+      setclassList('green-btn')
+    }
   }
   return (
     <div className="app">
@@ -17,4 +22,4 @@ const App = () => {
 //const myButton = <button className="green-btn">Hi JSX</button>
 const conteiner = document.getElementById('app')
 const root = ReactDOM.createRoot(conteiner)
-root.render(<App />)
+root.render(<App initialButtonText="Click me" initialClass="" />)
