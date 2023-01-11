@@ -6,22 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NoTab</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto+Sans"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat"
+      href="https://fonts.googleapis.com/css2?family=Roboto"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="cookie">
+      <p class="cookie_text">
+        We use cookie to improve your experience on our site. By using our site
+        you consent cookies.
+      </p>
+      <button class="cookie_button" onclick="hideCookie()">OK</button>
+      <script>
+        function hideCookie() {
+          let test = (document.getElementsByClassName(
+            'cookie'
+          )[0].style.display = 'none')
+        }
+      </script>
+    </div>
     <div class="container">
       <header>
         <div class="menu">
           <div class="logo">
-            <img src="img/Cube new version-05.png" />
-            <h1>NoTab</h1>
+            <picture>
+              <source media="(max-width: 480px)" srcset="img/Cube_mobile.png" />
+              <img src="img/Cube new version-05.png" />
+            </picture>
+            <picture>
+              <source media="(max-width: 480px)" srcset="img/notab_title.svg" />
+              <img src="img/notab_title_desktop.svg" />
+            </picture>
           </div>
           <div class="login">
             <img class="icon_user" src="img/icon_user.png" />
@@ -29,43 +53,36 @@
           </div>
         </div>
         <img class="phone" src="img/iPhone.png" />
+        <svg class="blur"></svg>
         <div class="header_phone">
-          <div>
-            <h2>
+          <div class="header_titile">
+            <h1>
               A platform<br />
               that works smarter
-            </h2>
-            <div style="margin-top: 56px">
+            </h1>
+            <div>
               <svg class="small_blur"></svg>
               <div class="line"></div>
               <p class="header_text">
-                NoTab allows bars & nightclubs<br />
-                to manage, understand, and grow<br />
+                NoTab allows bars & nightclubs to manage, understand, and grow
                 their business from a single dashboard
               </p>
             </div>
           </div>
-
-          <svg class="blur"></svg>
         </div>
+
         <div class="download_buttons">
           <p class="download_text">DOWNLOAD OUR APP</p>
-          <div style="margin-right: 110px">
-            <img src="img/AppStore.png" style="margin-right: 29px" />
+          <div class="store_btn">
+            <img src="img/AppStore.png" />
             <img src="img/GooglePlay.png" />
           </div>
         </div>
       </header>
+
       <main>
-        <div class="cookie">
-          <p class="cookie_text">
-            We use cookie to improve your experience on our site. By using our
-            site you consent cookies.
-          </p>
-          <button class="cookie_button">OK</button>
-        </div>
         <div class="rectangle_block">
-          <div class="rectangle" style="margin-right: 81px">
+          <div class="rectangle">
             <p>
               Would like to become<br />
               a member, please<br />
@@ -75,15 +92,13 @@
               >support@notab.com</a
             >
           </div>
-          <div class="rectangle">
+          <div class="rectangle rectangle_mobile">
             <p>Already a partner?</p>
             <a class="rectangle_link">Login</a>
           </div>
         </div>
-
-        <img class="phone_horizont" src="img/iPhone.png" />
-        <svg class="circle"></svg>
         <div class="mission">
+          <svg class="circle"></svg>
           <h3 class="title_mission">Our mission and vision</h3>
           <p>
             While technology is our sweet spot, we’ve developed our vision
@@ -91,7 +106,11 @@
             through simplistic tools. And as your business grows, we’ll grow
             right alongside with you.
           </p>
+          <div class="phone_horizont">
+            <img src="img/iPhone.png" />
+          </div>
         </div>
+
         <div class="grid_wrap">
           <div class="barman">
             <img src="img/barman.jpg" class="barman_img" />
@@ -112,14 +131,17 @@
             </div>
           </div>
         </div>
+
         <div class="graphs">
           <div class="text_graphs_wrap">
             <div class="text_graphs">
+              <div class="graph_rectangle"></div>
               <h3>BI Tool Integration</h3>
               <p>
-                We use Business Intelligence Tool that allows you to be updated
-                what is happening in your business just by one click. Track
-                revenue and profit by one click.
+                We use Business Intelligence Tool that allows<br />
+                you to be updated what is happening in your<br />
+                business just by one click. Track revenue<br />
+                and profit by one click.
               </p>
             </div>
           </div>
@@ -239,8 +261,207 @@
             <img src="img/Graph7.png" class="graph7" />
           </div>
         </div>
+
+        <div class="qrcode">
+          <div class="img_filtr2"></div>
+          <img src="img/Dj.png" class="qr_img1" />
+          <img src="img/drink.png" class="qr_img2" />
+          <img src="img/Nightlife.png" class="qr_img3" />
+          <div class="qr_text">
+            <h3>QR code</h3>
+            <p>
+              No more conflict situations due to<br />
+              wrong order. The guest selects the<br />
+              positions, and after that an<br />
+              individual QR code of his order<br />
+              is generated
+            </p>
+            <img src="img/AppStore.png" />
+            <img src="img/GooglePlay.png" />
+          </div>
+          <img src="img/order-phone.png" class="qr_img4" />
+          <img src="img/order-phone2.png" class="qr_img5" />
+        </div>
+
+        <div class="qr_rectangle"></div>
+        <div class="generic_qr">
+          <img src="img/qr_phone.png" />
+          <svg
+            class="arrow"
+            width="81"
+            height="70"
+            viewBox="0 0 81 70"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.632181 4.08355C0.454104 3.87249 0.480838 3.55704 0.691895 3.37897L4.1312 0.477039C4.34225 0.298961 4.6577 0.325694 4.83578 0.536747C5.01385 0.7478 4.98712 1.06325 4.77607 1.24133L1.71891 3.82082L4.2984 6.87798C4.47648 7.08903 4.44974 7.40448 4.23869 7.58256C4.02764 7.76064 3.71219 7.73391 3.53411 7.52285L0.632181 4.08355ZM79.5196 69.3236C78.0304 58.6552 73.064 43.633 61.1464 30.6611C49.2381 17.6993 30.3581 6.74959 0.972106 4.25932L1.05655 3.2629C30.6708 5.77251 49.7909 16.8229 61.8828 29.9845C73.9653 43.136 78.999 58.3606 80.51 69.1854L79.5196 69.3236Z"
+              fill="white"
+            />
+          </svg>
+          <p class="qr_scan_text">Scan QR-code</p>
+        </div>
+        <div class="generic_qr_title">
+          <h3>Generate your<br />QR-code</h3>
+          <p>
+            The guest QR code is scanned<br />
+            by the staff and automatically sent
+          </p>
+        </div>
+        <div class="longscroll_rectangle"></div>
+        <div class="longscroll">
+          <div class="longscroll_title">
+            <h3>
+              Easier ordering.<br />
+              Happier guests.
+            </h3>
+            <p>NoTab makes it simple for patrons to easily</p>
+          </div>
+          <div class="longscroll_wrap">
+            <div class="longscroll_text longscroll_text1">
+              No more lost or<br />
+              forgotten credit cards
+            </div>
+            <div class="longscroll_text longscroll_text2">
+              No more lost or<br />
+              forgotten credit cards
+            </div>
+            <div class="longscroll_text longscroll_text3">
+              No more split<br />
+              your tab
+            </div>
+            <div class="longscroll_text longscroll_text4">Skip the line</div>
+          </div>
+        </div>
+
+        <div class="notab">
+          <div class="img_filtr3"></div>
+          <div class="notab_phone">
+            <img src="img/phone_notab.png" />
+            <img src="img/Screenshot_notab.png" />
+          </div>
+        </div>
       </main>
-      <footer></footer>
+      <div class="form_submit">
+        <div class="form_title">
+          <div class="form_rectangle"></div>
+          <div class="form_title_text">
+            <h3>Get In Touch</h3>
+            <p>
+              Have questions about Noble or just want to say hello?<br />
+              Drop us a line and a member of our team will getback to you
+              shortly.
+            </p>
+          </div>
+        </div>
+        <form action="#" method="post" target="_blank" id="form" novalidate>
+          <ul>
+            <li>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                id="name"
+                required
+              />
+            </li>
+            <li>
+              <input
+                type="number"
+                name="age"
+                placeholder="Venue Name"
+                id="age"
+                min="0"
+                max="125"
+                required
+              />
+            </li>
+            <li class="form_city">
+              <input
+                type="text"
+                name="venue_city"
+                placeholder="Venue City"
+                id="venue_city"
+                required
+              />
+
+              <input
+                type="text"
+                name="state_city"
+                placeholder="State City"
+                id="state_city"
+                required
+              />
+            </li>
+            <li>
+              <input
+                type="email"
+                name="mail"
+                placeholder="E-mail"
+                id="email"
+                required
+              />
+            </li>
+            <li>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                id="subject"
+                required
+              />
+            </li>
+            <li>
+              <textarea
+                name="comment"
+                placeholder="Message"
+                id="message"
+                required
+              ></textarea>
+            </li>
+          </ul>
+          <button type="submit">Send</button>
+          <script>
+            const inputs = document.querySelectorAll('input, textarea')
+            const form = document.getElementById('form')
+            const arr = Array.from(inputs)
+            form.addEventListener('submit', function (event) {
+              arr.forEach(function (element) {
+                if (!element.validity.valid) {
+                  element.style.cssText = 'border: 2px solid #FF0000;'
+                  event.preventDefault()
+                } else {
+                  element.style.cssText = 'border:none'
+                }
+              })
+            })
+          </script>
+        </form>
+      </div>
+
+      <div class="footer_rectangle1"></div>
+      <div class="download_buttons2">
+        <p class="download_text">DOWNLOAD OUR APP</p>
+        <div class="store_buttons">
+          <img src="img/AppStore1_Large.png" />
+          <img src="img/GooglePlay_Large.png" />
+        </div>
+      </div>
+      <footer>
+        <div class="footer_rectangle"></div>
+        <div class="footer_text">
+          <div class="contact_us">
+            <img src="img/notab.svg" />
+            <p>Contact us:</p>
+            <a href="mailto:support@notab.com">support@notab.com</a>
+            <p>© 2020 - NoTab®</p>
+          </div>
+          <div class="term_use">
+            <a class="term_button">Terms to use</a>
+            <a class="policy_btn">Privacy policy</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
