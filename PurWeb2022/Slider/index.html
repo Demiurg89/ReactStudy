@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
     <link rel="stylesheet" href="style.css" />
+    <script async src="script.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="slider">
-      <div class="slider__wrapper">
-        <div class="slider__items">
-          <div class="slider__item">
+      <div class="slider_wrapper" id="wrapper">
+        <div class="slider_items">
+          <div class="slider_item">
             <img src="img/1.jpg" />
           </div>
-          <div class="slider__item">
+          <div class="slider_item">
             <img src="img/2.jpg" />
           </div>
-          <div class="slider__item">
+          <div class="slider_item">
             <img src="img/3.jpg" />
+          </div>
+          <div class="slider_item">
+            <img src="img/4.jpg" />
           </div>
         </div>
       </div>
-      <!-- Кнопки для перехода к предыдущему и следующему слайду -->
-      <button class="btn btn_prev"></button>
-      <button class="btn btn_next"></button>
+      <div class="button">
+        <button class="btn btn_prev"></button>
+        <button class="btn btn_next"></button>
+      </div>
     </div>
   </body>
 </html>
