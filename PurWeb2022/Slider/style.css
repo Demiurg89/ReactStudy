@@ -1,16 +1,18 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   overflow: hidden;
 }
 .slider {
-  width: 100vw;
+  width: 500px;
   height: auto;
   position: relative;
+  margin: 0 auto;
 }
 .slider_wrapper {
   position: relative;
-  width: 100vw;
+  width: 500px;
   height: auto;
+  overflow: hidden;
 }
 
 .slider_items {
@@ -23,7 +25,7 @@ body {
 }
 
 img {
-  width: 100vw;
+  width: 500px;
   height: 100%;
   max-height: 100vh;
 }
@@ -62,4 +64,41 @@ img {
 }
 .btn_next {
   background-image: url('img/arrow_right.png');
+}
+input {
+  display: none;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+}
+label {
+  display: inline-block;
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+}
+label:hover {
+  background-color: blue;
+}
+
+#first:checked ~ [for='first'] {
+  background-color: blue;
+}
+
+#second:checked ~ [for='second'] {
+  background-color: blue;
+}
+
+#third:checked ~ [for='third'] {
+  background-color: blue;
+}
+
+#fourth:checked ~ [for='fourth'] {
+  background-color: blue;
 }
